@@ -11,7 +11,7 @@ A python script for getting danmaku of videos in BiLibili.
 
 - You can also use it as a module, which call it's function to get id of danmaku list, url or json document of danmaku list.
 
-A .exe program which can run directly: [getdm.exe](https://github.com/muhz9786/getdanmaku/releases/tag/v1.0)
+A exe program which can run directly: [getdm.exe](https://github.com/muhz9786/getdanmaku/releases/tag/v1.0)
 
 ---
 
