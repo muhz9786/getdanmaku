@@ -39,10 +39,10 @@ def getDoc(bid):
     r.encoding = "utf-8"
     return r.text
 
-# 下载弹幕列表json文档
+# 下载弹幕列表xml文档
 def getFile(bid):
     doc = getDoc(bid)
-    f = open(FILE_PATH + bid + ".json", "w", encoding="utf-8")
+    f = open(FILE_PATH + bid + ".xml", "w", encoding="utf-8")
     f.write(doc)
     f.close
 
