@@ -36,12 +36,13 @@ def getUrl(bid):
 def getDoc(bid):
     url = getUrl(bid)
     r = requests.get(url, headers=HEADER)
+    r.encoding = "utf-8"
     return r.text
 
 # 下载弹幕列表json文档
 def getFile(bid):
     doc = getDoc(bid)
-    f = open(FILE_PATH + bid + ".json", "w")
+    f = open(FILE_PATH + bid + ".json", "w", encoding="utf-8")
     f.write(doc)
     f.close
 
