@@ -47,5 +47,4 @@ def getFile(bid):
 
 if __name__ == "__main__":
     bid = sys.argv[1]
-    url = getUrl(bid)
-    print(url)
+    getFile(bid)
