@@ -20,9 +20,9 @@ HEADER = {
 
 # 获取视频弹幕池id
 def getOid(bid):
-    doc = requests.get(AID_URL + bid, headers=HEADER)
+    r = requests.get(AID_URL + bid, headers=HEADER)
     aid = str(json.loads(doc.text)["data"]["aid"])
-    doc = requests.get(OID_URL + aid, headers=HEADER)
+    r = requests.get(OID_URL + aid, headers=HEADER)
     oid = str(json.loads(doc.text)["data"][0]["cid"])
     return oid
 
@@ -35,8 +35,8 @@ def getUrl(bid):
 # 获取弹幕列表json文档
 def getDoc(bid):
     url = getUrl(bid)
-    doc = requests.get(url, headers=HEADER)
-    return doc
+    r = requests.get(url, headers=HEADER)
+    return r.text
 
 # 下载弹幕列表json文档
 def getFile(bid):
