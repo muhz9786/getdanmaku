@@ -21,9 +21,9 @@ HEADER = {
 # 获取视频弹幕池id
 def getOid(bid):
     r = requests.get(AID_URL + bid, headers=HEADER)
-    aid = str(json.loads(doc.text)["data"]["aid"])
+    aid = str(json.loads(r.text)["data"]["aid"])
     r = requests.get(OID_URL + aid, headers=HEADER)
-    oid = str(json.loads(doc.text)["data"][0]["cid"])
+    oid = str(json.loads(r.text)["data"][0]["cid"])
     return oid
 
 # 获取弹幕列表API的url
